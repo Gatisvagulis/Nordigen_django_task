@@ -1,0 +1,80 @@
+body{
+    margin: .5rem;
+}
+
+.navButton{
+    display: flex;
+}
+
+.navButton button{
+    width: fit-content;
+    background-color: rgb(216, 212, 205);
+    cursor: pointer;
+    border: none;
+    border-radius: .5rem;
+    font-size: 1.8rem;
+    padding: .5rem;
+    margin: .5rem;
+}
+
+.navButton button:hover{
+    background-color: rgb(164, 162, 157);
+}
+
+.bankButton{
+    width: 18rem;
+    background-color: rgb(246, 242, 235);
+    cursor: pointer;
+    border-radius: .5rem;
+    font-size: 1.8rem;
+    padding: .5rem;
+    margin: .5rem;
+}
+
+.bankButton:hover{
+    background-color: rgb(234, 229, 221);
+}
+
+.forDiv{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    /* align-items: center; */
+    justify-items: center;
+    margin: 1rem;
+}
+
+.mainDiv{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin: 1rem;
+}
+
+.setupDiv{
+    padding:1rem;
+}
+
+.tokenForm{
+    display: flex;
+    flex-direction: column;  
+    margin: 1rem;  
+}
+
+.tokenForm input{
+    height: 3rem;
+    border-radius: 1rem;
+}
+
+.customBtn{
+    background:rgb(81, 199, 81);
+    border-radius: .5rem;
+    border:none;
+    width: fit-content;
+    align-self: center;
+    font-size: 1.8rem;
+    padding: .9rem;
+    cursor: pointer;   
+}

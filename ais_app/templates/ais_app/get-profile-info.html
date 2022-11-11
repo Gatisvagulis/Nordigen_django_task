@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+    {% block content %}
+        <div class="navButton"><a href="{% url 'index' %}"><button>Back to all countries</button></a></div>
+        <div class="forDiv">
+            {% if bankInfo %}
+                <h1>Below you can check your connected bank accounts</h1>
+                {% else %}
+                <h1>You have not connected any bank account jet</h1>
+            {% endif %}
+            {% for i in bankInfo %}
+                <div>
+                    <span>{{i.bankName}}</span>
+                </div>
+                <a href="{% url 'getTransactions' i.requisitionId %}"><button class="bankButton">Transactions</button></a>
+                <a href="{% url 'getDetails' i.requisitionId %}"><button class="bankButton">Details</button></a>
+                <a href="{% url 'getBalance' i.requisitionId %}"><button class="bankButton">Balance</button></a>
+                <a href="{% url 'premiumProducts' i.requisitionId %}"><button class="bankButton">Premium products</button></a>
+                {% endfor %}
+        </div>
+
+    {% endblock content %}

@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+    {% block content %}
+    <div class="navButton"><a href="{% url 'profile' %}"><button>Get all banks</button></a></div>
+    <div class="mainDiv">
+        <h1>Premium products:</h1>
+        <h2>Categories balance total:</h2>
+        <pre> {{categoryList | pprint}}</pre>
+        <hr>
+        <h2>Transactions total (premium products enabled)</h2>
+        <pre>{{premium_details | pprint}}</pre>
+    </div>
+
+    {% endblock content %}

@@ -1,0 +1,9 @@
+{% extends 'main.html' %}
+    {% block content %}
+    <div class="navButton"><a href="{% url 'profile' %}"><button>Get all banks</button></a></div>
+    <div class="mainDiv">
+        <h1>Details</h1>
+        <pre>{{details | pprint}}</pre>
+    </div>
+
+    {% endblock content %}

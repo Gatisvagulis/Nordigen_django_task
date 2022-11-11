@@ -1,0 +1,20 @@
+{% extends 'main.html' %}
+{% block content %}
+    <div class="forDiv">
+        <h1>Get your access and refresh tokens here</h1>
+            <form class="tokenForm">
+                <label for="">Copy access token</label >
+                <input type="name" value="{{token_data.access}}">
+                <label for="">Copy refresh token</label>
+                <input type="name" value="{{token_data.refresh}}">
+            </form>
+        </div>
+    <div class="setupDiv">
+        <h1>To successfully activate tokens please follow the steps below</h1>
+        <ol>
+            <li>Copy the tokens and save them in your project under file .env. The path in project <mark>Nordigen_django\nordigen\.env</mark> ACCESS_TOKEN=enter access token, REFRESH_TOKEN=enter refresh token</li>
+            <li>When boath tokens are saved please stop you Django server and start it again <mark>py manage.py runserver</mark> </li>
+            <li>Refresh page in browser</li>
+        </ol>   
+    </div>
+    {% endblock content %}
